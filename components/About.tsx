@@ -1,4 +1,4 @@
-import { Award, Building2, Users, History } from "lucide-react";
+import { Award, Building2 } from "lucide-react";
 
 export default function About() {
   return (
@@ -12,6 +12,7 @@ export default function About() {
             <div className="absolute -top-10 -left-10 w-full h-full border-4 border-[#fbbc33] rounded-3xl -z-10" />
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              {/* Se tiver foto da fachada ou frota, coloque aqui */}
               <img 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" 
                 alt="Sede da Futura Climatização" 
@@ -37,11 +38,11 @@ export default function About() {
             </div>
 
             <p className="text-slate-600 text-lg leading-relaxed">
-              A <strong>Futura Climatização e Energia Solar</strong> faz parte do sólido <strong>Grupo F5</strong>. Não somos apenas instaladores; somos uma empresa de engenharia completa que atua há duas décadas transformando a relação das pessoas com a energia e o conforto.
+              [cite_start]A <strong>Futura Climatização e Energia Solar</strong> consolidou sua marca pela excelência técnica e compromisso com o cliente[cite: 4]. Não somos apenas instaladores; somos uma empresa de engenharia completa que atua há duas décadas transformando a relação das pessoas com a energia e o conforto.
             </p>
 
             <p className="text-slate-600 leading-relaxed">
-              Nossa missão vai além da economia: entregamos sustentabilidade, inovação e projetos de alta performance que valorizam seu patrimônio e garantem o futuro das próximas gerações.
+              [cite_start]Nossa missão vai além da economia: entregamos sustentabilidade [cite: 16][cite_start], inovação [cite: 10] e projetos de alta performance que valorizam seu patrimônio e garantem o futuro das próximas gerações.
             </p>
 
             {/* Grid de Diferenciais */}
@@ -49,8 +50,8 @@ export default function About() {
               <div className="flex items-start gap-3">
                 <Building2 className="text-[#fbbc33] shrink-0" size={24} />
                 <div>
-                  <h4 className="font-bold text-[#054b82]">Grupo F5</h4>
-                  <p className="text-sm text-slate-500">Solidez corporativa comprovada.</p>
+                  <h4 className="font-bold text-[#054b82]">Estrutura Sólida</h4>
+                  <p className="text-sm text-slate-500">Sede própria e processos maduros.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -62,10 +63,10 @@ export default function About() {
               </div>
             </div>
 
-            {/* Assinatura Visual (Opcional) */}
+            {/* Assinatura Visual */}
             <div className="pt-6 border-t border-slate-100">
               <p className="text-sm text-slate-400 italic">
-                "Nosso foco vai além da economia, promovendo energia limpa e inteligente."
+                [cite_start]"Nosso foco vai além da economia, promovendo energia limpa e inteligente." [cite: 7]
               </p>
             </div>
 

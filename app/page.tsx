@@ -1,11 +1,12 @@
-import { Phone, Sun, Zap, CheckCircle, ArrowRight } from "lucide-react";
+import { Phone, Zap, CheckCircle, ArrowRight } from "lucide-react";
+// Importando todos os componentes
 import Features from "@/components/Features"; 
+import About from "@/components/About";
 import Steps from "@/components/Steps";
+import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import Team  from "@/components/Team";
-import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -13,22 +14,22 @@ export default function Home() {
       
       {/* --- HEADER --- */}
       <header className="fixed w-full top-0 left-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-100 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           
-          {/* Logo Texto */}
-          <div className="flex items-center gap-2">
-            <div className="bg-[#fbbc33] p-1.5 rounded-lg">
-              <Sun className="text-white w-6 h-6 fill-current" />
-            </div>
-            <div className="font-bold text-2xl tracking-tighter text-[#054b82] leading-none">
-              Futura <br/>
-              <span className="text-sm font-normal text-[#00983a] tracking-wide uppercase">Climatização e Solar</span>
-            </div>
+          {/* LOGOMARCA OFICIAL */}
+          <div className="flex items-center">
+            {/* Certifique-se de ter o arquivo logo.png na pasta /public */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/logo.png" 
+              alt="Futura Climatização e Energia Solar" 
+              className="h-14 w-auto object-contain" // Ajuste o h-14 conforme a proporção da sua logo
+            />
           </div>
 
           <a 
-            href="https://wa.me/5579999999999" 
-            className="bg-[#00983a] hover:bg-green-700 text-white px-6 py-2.5 rounded-full font-bold transition flex items-center gap-2 shadow-lg shadow-green-600/20"
+            href="https://wa.me/5579999812895" 
+            className="bg-[#00983a] hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-bold transition flex items-center gap-2 shadow-lg shadow-green-600/20"
           >
             <Phone size={18} />
             <span className="hidden sm:inline">Orçamento via WhatsApp</span>
@@ -46,7 +47,7 @@ export default function Home() {
           <img 
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop" 
             alt="Fundo Energia Solar" 
-            className="w-full h-full object-cover opacity-30 mix-blend-overlay" 
+            className="w-full h-full object-cover opacity-55 mix-blend-overlay" 
           />
           {/* 2. Gradiente de Segurança para leitura */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#054b82] via-[#054b82]/90 to-[#054b82]/40" />
@@ -67,11 +68,11 @@ export default function Home() {
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] drop-shadow-lg">
               Sua conta de luz <br/>
-              <span className="text-[#fbbc33]">reduzida em até 95%</span>
+              <span className="text-[#fbbc33]">reduzida em até 90%</span>
             </h1>
             
             <p className="text-lg text-slate-100 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed drop-shadow-md">
-              Soluções completas em Energia Solar para sua casa ou empresa. Tecnologia de ponta, instalação por equipe própria e altamente qualificada e o suporte que só a Futura oferece.
+              Soluções completas em Energia Solar para sua casa ou empresa. Tecnologia de ponta, instalação certificada e o suporte e pós venda que só a Futura oferece.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
@@ -137,15 +138,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SEÇÕES ADICIONAIS --- */}
+      {/* --- SEÇÃO 2: BENEFÍCIOS (Racional) --- */}
       <Features />
+
+      {/* --- SEÇÃO 3: SOBRE/AUTORIDADE (Institucional) --- */}
       <About />
+
+      {/* --- SEÇÃO 4: COMO FUNCIONA (Processo) --- */}
       <Steps />
+
+      {/* --- SEÇÃO 5: EQUIPE (Confiança) --- */}
       <Team />
+
+      {/* --- SEÇÃO 6: GALERIA (Prova Social) --- */}
       <Gallery />
+
+      {/* --- SEÇÃO 7: FAQ (Quebra de Objeções) --- */}
       <FAQ />
+
+      {/* --- RODAPÉ --- */}
       <Footer />
-      
 
     </main>
   );
