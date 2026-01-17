@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Fale Agora</p>
-              <p className="font-bold text-lg md:text-xl">(79) 99999-9999</p>
+              <p className="font-bold text-lg md:text-xl">(79) 99981-2895</p>
             </div>
           </a>
 
@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Atuação</p>
-              <p className="font-bold text-lg md:text-xl">Aracaju e Região</p>
+              <p className="font-bold text-lg md:text-xl">Todo o Brasil</p>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Orçamento</p>
-              <p className="font-bold text-lg md:text-xl">contato@futura.com.br</p>
+              <p className="font-bold text-lg md:text-xl">energiasolar@futuraclimatizacao.com.br</p>
             </div>
           </a>
 
@@ -60,7 +60,7 @@ export default function Footer() {
           
           <div className="text-center md:text-left space-y-1">
             <p>© {new Date().getFullYear()} Futura Climatização. Todos os direitos reservados.</p>
-            <p className="text-xs text-slate-500">CNPJ: 00.000.000/0001-00</p>
+            <p className="text-xs text-slate-500">CNPJ: 30.430.226/0001-93</p>
           </div>
           
           <div className="flex gap-4">

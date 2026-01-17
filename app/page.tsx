@@ -7,6 +7,7 @@ import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import HeroForm from "@/components/HeroForm";
 
 export default function Home() {
   return (
@@ -42,14 +43,12 @@ export default function Home() {
         
         {/* --- LAYER DE BACKGROUND --- */}
         <div className="absolute inset-0 z-0">
-          {/* 1. Imagem de Fundo (Painéis Solares) com mistura */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop" 
             alt="Fundo Energia Solar" 
-            className="w-full h-full object-cover opacity-55 mix-blend-overlay" 
+            className="w-full h-full object-cover opacity-20 mix-blend-overlay" 
           />
-          {/* 2. Gradiente de Segurança para leitura */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#054b82] via-[#054b82]/90 to-[#054b82]/40" />
         </div>
 
@@ -60,7 +59,6 @@ export default function Home() {
           
           {/* Esquerda: Texto de Vendas */}
           <div className="space-y-8 text-center lg:text-left">
-            
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-[#fbbc33] px-4 py-1.5 rounded-full text-sm font-bold border border-white/20 shadow-sm">
               <Zap size={16} fill="currentColor" />
               Economize Hoje, Sustente o Amanhã
@@ -68,18 +66,18 @@ export default function Home() {
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] drop-shadow-lg">
               Sua conta de luz <br/>
-              <span className="text-[#fbbc33]">reduzida em até 90%</span>
+              <span className="text-[#fbbc33]">reduzida em até 95%</span>
             </h1>
             
             <p className="text-lg text-slate-100 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed drop-shadow-md">
-              Soluções completas em Energia Solar para sua casa ou empresa. Tecnologia de ponta, instalação certificada e o suporte e pós venda que só a Futura oferece.
+              Soluções completas em Energia Solar para sua casa ou empresa em Aracaju. Tecnologia de ponta, instalação certificada e o suporte que só a Futura oferece.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-              <button className="bg-[#fbbc33] hover:bg-yellow-500 text-[#054b82] px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-yellow-500/20 transition hover:-translate-y-1 flex items-center justify-center gap-2">
+              <a href="#simulador" className="bg-[#fbbc33] hover:bg-yellow-500 text-[#054b82] px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-yellow-500/20 transition hover:-translate-y-1 flex items-center justify-center gap-2">
                 Simular Economia
                 <ArrowRight size={20} />
-              </button>
+              </a>
               
               <div className="flex items-center gap-2 text-white font-medium text-sm justify-center px-4 drop-shadow-md">
                 <CheckCircle size={18} className="text-[#00983a] bg-white rounded-full" /> 
@@ -88,53 +86,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Direita: Formulário */}
-          <div className="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border-b-4 border-[#00983a] w-full max-w-md mx-auto relative">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00983a] text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
-              Orçamento Gratuito
-            </div>
-
-            <h3 className="text-2xl font-bold mb-2 text-center text-[#054b82]">Simule seu Projeto</h3>
-            <p className="text-slate-500 text-center mb-8 text-sm">Preencha para receber um estudo personalizado.</p>
-            
-            <form className="space-y-5">
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-1.5 ml-1">Nome Completo</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 focus:ring-2 focus:ring-[#054b82] outline-none transition placeholder:text-slate-400" 
-                  placeholder="Como gostaria de ser chamado?" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-1.5 ml-1">WhatsApp</label>
-                <input 
-                  type="tel" 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 focus:ring-2 focus:ring-[#054b82] outline-none transition placeholder:text-slate-400" 
-                  placeholder="(79) 99999-9999" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-1.5 ml-1">Valor médio da conta (R$)</label>
-                <input 
-                  type="number" 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 focus:ring-2 focus:ring-[#054b82] outline-none transition placeholder:text-slate-400" 
-                  placeholder="Ex: 500,00" 
-                />
-              </div>
-              <button 
-                type="button" 
-                className="w-full bg-[#054b82] hover:bg-[#043d6b] text-white font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-blue-900/10 mt-2"
-              >
-                Ver Meu Potencial de Economia
-              </button>
-            </form>
-
-            <p className="text-center text-xs text-slate-400 mt-6 flex items-center justify-center gap-1">
-              <Zap size={12} className="text-[#fbbc33]" fill="currentColor"/> 
-              Resposta em menos de 1 hora
-            </p>
+          {/* Direita: CALCULADORA REAL (Aqui está a mudança) */}
+          <div id="simulador">
+            <HeroForm />
           </div>
+
         </div>
       </section>
 
