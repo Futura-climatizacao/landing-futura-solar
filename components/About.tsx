@@ -6,27 +6,29 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
-          {/* Lado Esquerdo: Imagem Institucional */}
+          
           <div className="w-full lg:w-1/2 relative">
-            {/* Elemento decorativo de fundo */}
+            
             <div className="absolute -top-10 -left-10 w-full h-full border-4 border-[#fbbc33] rounded-3xl -z-10" />
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              {/* Se tiver foto da fachada ou frota, coloque aqui */}
+              
+              
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" 
-                alt="Sede da Futura Climatização" 
+                src="/usina_solar_equipe.png" 
+                alt="Usina Solar Realizada pela Futura" 
                 className="w-full h-full object-cover"
               />
+              
               {/* Badge Flutuante */}
               <div className="absolute bottom-0 right-0 bg-[#054b82] text-white p-6 rounded-tl-3xl">
-                <p className="text-4xl font-bold font-mono">20+</p>
+                <p className="text-4xl font-bold font-mono">20 +</p>
                 <p className="text-xs uppercase tracking-widest text-[#fbbc33]">Anos de História</p>
               </div>
             </div>
           </div>
 
-          {/* Lado Direito: Texto Institucional */}
+          
           <div className="w-full lg:w-1/2 space-y-8">
             <div>
               <span className="text-[#00983a] font-bold text-sm uppercase tracking-wider mb-2 block">
@@ -38,11 +40,11 @@ export default function About() {
             </div>
 
             <p className="text-slate-600 text-lg leading-relaxed">
-              [cite_start]A <strong>Futura Climatização e Energia Solar</strong> consolidou sua marca pela excelência técnica e compromisso com o cliente[cite: 4]. Não somos apenas instaladores; somos uma empresa de engenharia completa que atua há duas décadas transformando a relação das pessoas com a energia e o conforto.
+              A <strong>Futura Climatização e Energia Solar</strong> consolidou sua marca pela excelência técnica e compromisso com o cliente. Não somos apenas instaladores; somos uma empresa de engenharia completa que atua há duas décadas transformando a relação das pessoas com a energia e o conforto.
             </p>
 
             <p className="text-slate-600 leading-relaxed">
-              [cite_start]Nossa missão vai além da economia: entregamos sustentabilidade [cite: 16][cite_start], inovação [cite: 10] e projetos de alta performance que valorizam seu patrimônio e garantem o futuro das próximas gerações.
+              Nossa missão vai além da economia: entregamos sustentabilidade, inovação e projetos de alta performance que valorizam seu patrimônio e garantem o futuro das próximas gerações.
             </p>
 
             {/* Grid de Diferenciais */}
@@ -66,7 +68,7 @@ export default function About() {
             {/* Assinatura Visual */}
             <div className="pt-6 border-t border-slate-100">
               <p className="text-sm text-slate-400 italic">
-                [cite_start]"Nosso foco vai além da economia, promovendo energia limpa e inteligente." [cite: 7]
+                "Nosso foco vai além da economia, promovendo energia limpa e inteligente."
               </p>
             </div>
 

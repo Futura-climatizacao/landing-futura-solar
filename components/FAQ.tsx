@@ -85,10 +85,10 @@ export default function FAQ() {
             Ainda tem alguma dúvida específica?
           </p>
           <a 
-            href="https://wa.me/5579999999999" 
+            href="https://wa.me/5579999812895" 
             className="inline-block bg-[#00983a] hover:bg-green-700 text-white px-8 py-3 rounded-full font-bold transition shadow-lg shadow-green-600/20"
           >
-            Falar com Consultor Agora
+            Fale com Consultor Agora
           </a>
         </div>
 

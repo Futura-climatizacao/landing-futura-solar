@@ -84,7 +84,7 @@ export default function Steps() {
 
         {/* CTA Intermediário */}
         <div className="mt-16 text-center">
-          <a href="https://wa.me/5579999999999" className="inline-flex items-center gap-2 text-[#00983a] font-bold hover:underline text-lg">
+          <a href="https://wa.me/5579999812895" className="inline-flex items-center gap-2 text-[#00983a] font-bold hover:underline text-lg">
             Quero iniciar meu projeto agora <ArrowRight size={20} />
           </a>
         </div>
