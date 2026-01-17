@@ -47,7 +47,7 @@ export default function Home() {
           <img 
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop" 
             alt="Fundo Energia Solar" 
-            className="w-full h-full object-cover opacity-20 mix-blend-overlay" 
+            className="w-full h-full object-cover opacity-90 mix-blend-overlay" 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#054b82] via-[#054b82]/90 to-[#054b82]/40" />
         </div>
