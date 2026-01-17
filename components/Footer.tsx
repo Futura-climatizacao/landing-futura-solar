@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* Email */}
-          <a href="mailto:contato@futura.com.br" className="flex items-center gap-4 hover:opacity-80 transition group text-left">
+          <a href="mailto:energiasolar@futuraclimatizacao.com.br" className="flex items-center gap-4 hover:opacity-80 transition group text-left">
             <div className="bg-white/10 p-3 rounded-full group-hover:bg-[#fbbc33] group-hover:text-[#054b82] transition-colors">
               <Mail size={24} />
             </div>

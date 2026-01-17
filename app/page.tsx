@@ -66,11 +66,11 @@ export default function Home() {
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] drop-shadow-lg">
               Sua conta de luz <br/>
-              <span className="text-[#fbbc33]">reduzida em até 95%</span>
+              <span className="text-[#fbbc33]">reduzida em até 90%</span>
             </h1>
             
             <p className="text-lg text-slate-100 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed drop-shadow-md">
-              Soluções completas em Energia Solar para sua casa ou empresa em Aracaju. Tecnologia de ponta, instalação certificada e o suporte que só a Futura oferece.
+              Soluções completas em Energia Solar para sua casa ou empresa. Tecnologia de ponta, instalação certificada e o suporte que só a Futura oferece.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
