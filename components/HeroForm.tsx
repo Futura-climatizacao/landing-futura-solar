@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Zap, ArrowRight, RefreshCw, CheckCircle } from "lucide-react";
+import { Zap, ArrowRight, RefreshCw, CheckCircle, Loader2 } from "lucide-react";
 
 export default function HeroForm() {
-  const [step, setStep] = useState<"form" | "result">("form");
+  const [step, setStep] = useState<"form" | "loading" | "result">("form");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -13,39 +13,44 @@ export default function HeroForm() {
   const [savings, setSavings] = useState({ monthly: 0, yearly: 0, total: 0 });
 
   const handleCalculate = () => {
-    // Lógica de cálculo
+    // 1. Validação simples
     const value = parseFloat(formData.billValue.replace(/[^\d,]/g, '').replace(',', '.'));
-
     if (!value || isNaN(value)) return;
 
-    const monthlySavings = value * 0.95;
-    const yearlySavings = monthlySavings * 12;
-    const twentyFiveYears = yearlySavings * 25;
+    // 2. Inicia o "Carregamento Fictício"
+    setStep("loading");
 
-    setSavings({
-      monthly: monthlySavings,
-      yearly: yearlySavings,
-      total: twentyFiveYears,
-    });
+    // 3. Aguarda 2 segundos para simular processamento complexo
+    setTimeout(() => {
+      // Lógica de cálculo
+      const monthlySavings = value * 0.95;
+      const yearlySavings = monthlySavings * 12;
+      const twentyFiveYears = yearlySavings * 25;
 
-    setStep("result");
+      setSavings({
+        monthly: monthlySavings,
+        yearly: yearlySavings,
+        total: twentyFiveYears,
+      });
+
+      // 4. Mostra o resultado
+      setStep("result");
+    }, 2000); // 2000ms = 2 segundos
   };
 
   const formatMoney = (val: number) => {
     return val.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
   };
 
-  const whatsappLink = `https://wa.me/5579999999999?text=Olá! Me chamo ${formData.name}. Fiz a simulação no site e vi que posso economizar cerca de ${formatMoney(savings.monthly)} por mês com energia solar. Gostaria de um orçamento detalhado.`;
+  const whatsappLink = `https://wa.me/5579999812895?text=Olá! Me chamo ${formData.name}. Fiz a simulação no site e vi que posso economizar cerca de ${formatMoney(savings.monthly)} por mês com energia solar. Gostaria de um orçamento detalhado.`;
 
   return (
-    // REMOVI O 'overflow-hidden' DAQUI PARA O BADGE APARECER
-    <div className="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border-b-4 border-[#00983a] w-full max-w-md mx-auto relative">
+    <div className="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border-b-4 border-[#00983a] w-full max-w-md mx-auto relative min-h-[420px] flex flex-col justify-center">
       
       {/* --- ESTADO 1: FORMULÁRIO --- */}
       {step === "form" && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
           
-          {/* Badge Flutuante (Agora vai aparecer inteiro) */}
           <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#00983a] text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-lg z-20 whitespace-nowrap border-2 border-white">
             Simulador Gratuito
           </div>
@@ -104,7 +109,20 @@ export default function HeroForm() {
         </div>
       )}
 
-      {/* --- ESTADO 2: RESULTADO --- */}
+      {/* --- ESTADO 2: CARREGANDO (Simulação) --- */}
+      {step === "loading" && (
+        <div className="text-center animate-in fade-in zoom-in-95 duration-300 py-10">
+          <Loader2 className="w-16 h-16 text-[#fbbc33] animate-spin mx-auto mb-6" />
+          <h3 className="text-xl font-bold text-[#054b82] mb-2">
+            Analisando consumo...
+          </h3>
+          <p className="text-slate-500 text-sm">
+            Consultando índices de irradiação solar na região.
+          </p>
+        </div>
+      )}
+
+      {/* --- ESTADO 3: RESULTADO --- */}
       {step === "result" && (
         <div className="text-center animate-in zoom-in-95 duration-500 py-2">
            <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#fbbc33] text-[#054b82] text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-lg z-20 whitespace-nowrap border-2 border-white">
