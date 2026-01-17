@@ -1,17 +1,23 @@
-import { Sun, Instagram, Facebook, Phone, MapPin, Mail } from "lucide-react";
+import { Instagram, Facebook, Phone, MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-[#054b82] text-white border-t border-white/10 pt-16 pb-8">
       <div className="container mx-auto px-4 text-center">
         
-        {/* 1. Identidade Visual Centralizada */}
+        {/* 1. Identidade Visual (Logo Oficial) */}
         <div className="flex flex-col items-center mb-10">
-          <div className="bg-[#fbbc33] p-3 rounded-xl mb-4 inline-block shadow-lg shadow-yellow-500/20">
-             {/* Mantive o ícone vetorial aqui para garantir contraste perfeito no fundo azul */}
-            <Sun className="text-white w-8 h-8 fill-current" />
+          
+          {/* Caixa branca para dar contraste na Logo */}
+          <div className="bg-white p-4 rounded-2xl mb-6 shadow-lg inline-block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/logo.png" 
+              alt="Futura Climatização e Energia Solar" 
+              className="h-16 w-auto object-contain" // Tamanho ajustado para o rodapé
+            />
           </div>
-          <h2 className="text-2xl font-bold tracking-tight mb-2">Futura Climatização e Energia Solar</h2>
+
           <p className="text-slate-300 max-w-md mx-auto text-sm leading-relaxed">
             Soluções de engenharia para quem busca economia real e sustentabilidade. Referência no Nordeste desde 2006.
           </p>
@@ -21,7 +27,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-12 border-y border-white/5 py-8">
           
           {/* Botão WhatsApp/Telefone */}
-          <a href="https://wa.me/5579999999999" className="flex items-center gap-4 hover:opacity-80 transition group text-left">
+          <a href="https://wa.me/5579999812895" className="flex items-center gap-4 hover:opacity-80 transition group text-left">
             <div className="bg-white/10 p-3 rounded-full group-hover:bg-[#fbbc33] group-hover:text-[#054b82] transition-colors">
               <Phone size={24} />
             </div>
@@ -43,13 +49,13 @@ export default function Footer() {
           </div>
 
           {/* Email */}
-          <a href="mailto:energiasolar@futuraclimatizacao.com.br" className="flex items-center gap-4 hover:opacity-80 transition group text-left">
+          <a href="mailto:contato@futura.com.br" className="flex items-center gap-4 hover:opacity-80 transition group text-left">
             <div className="bg-white/10 p-3 rounded-full group-hover:bg-[#fbbc33] group-hover:text-[#054b82] transition-colors">
               <Mail size={24} />
             </div>
             <div>
               <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Orçamento</p>
-              <p className="font-bold text-lg md:text-xl">energiasolar@futuraclimatizacao.com.br</p>
+              <p className="font-bold text-lg md:text-xl">solar@futuraclimatizacao.com.br</p>
             </div>
           </a>
 
@@ -64,7 +70,7 @@ export default function Footer() {
           </div>
           
           <div className="flex gap-4">
-            <a href="#" className="bg-white/5 p-2 rounded-lg hover:bg-[#fbbc33] hover:text-[#054b82] transition">
+            <a href="https://www.instagram.com/futuraclimatizacao" className="bg-white/5 p-2 rounded-lg hover:bg-[#fbbc33] hover:text-[#054b82] transition">
               <Instagram size={20} />
             </a>
             <a href="#" className="bg-white/5 p-2 rounded-lg hover:bg-[#fbbc33] hover:text-[#054b82] transition">
