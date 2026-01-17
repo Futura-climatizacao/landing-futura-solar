@@ -10,8 +10,8 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "Futura Solar | Economize até 95% na conta de luz",
-  description: "Soluções completas em Energia Solar e Climatização no Nordeste. Projetos residenciais e comerciais com garantia de 25 anos.",
+  title: "Futura Solar | Economize até 90% na conta de luz",
+  description: "Soluções completas em Energia Solar e Climatização no Nordeste e em todo o Brasil. Projetos residenciais e comerciais com garantia de 25 anos.",
   icons: {
     icon: "/icon.png", 
   },
