@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google"; // Importando a fonte oficial
+import { Ubuntu } from "next/font/google"; 
+import Script from "next/script"; 
 import "./globals.css";
 
-// Configurando a fonte Ubuntu (Regular, Bold, Light)
+
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
   subsets: ["latin"],
@@ -24,8 +25,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {/* Aplicando a fonte no corpo do site */}
+      
+      {/* --- GOOGLE TAG MANAGER (SCRIPT OTIMIZADO) --- */}
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-KGHBRW67');
+        `}
+      </Script>
+
+      
       <body className={`${ubuntu.className} antialiased`}>
+        
+        {/* --- GOOGLE TAG MANAGER (NOSCRIPT) --- */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KGHBRW67"
+            height="0" 
+            width="0" 
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         {children}
       </body>
     </html>
